@@ -3,10 +3,19 @@
 // to view single image
 // header('content-type:image/jpeg');
 
+// extract data from csv file
+$file = fopen('sample.csv', 'r');
+while (($line = fgetcsv($file)) !== FALSE) {
+  //$line is an array of the csv elements
+  $data=$line;
+}
+fclose($file);
+
 // List of applicants
-$row=['Sahamma','Pranay'];
+$row=$data;
+
    
-for($i=0;$i<=1;$i++){
+for($i=0;$i<=count($row);$i++){
 $uname=$row["$i"];
 
 $font='HapticScript-Regular2.otf';
