@@ -2,6 +2,20 @@
 
 This is a simple PHP script to generate certificates from a CSV file, add names to a template image, and then generate PDF certificates. It also includes a function to send the certificates via email using PHPMailer.
 
+## Prerequisites
+
+To run this script, you need to have the following software installed on your system:
+
+- PHP (version 5.6 or higher)
+- PHP GD library enabled
+- FPDF library
+- PHPMailer library
+
+## Built With
+
+- [FPDF](http://www.fpdf.org/) - A PHP class to generate PDF files
+- [PHPMailer](https://github.com/PHPMailer/PHPMailer) - A PHP email sending library
+
 ## Installation
 
 1. Clone the repository to your local machine or server:
