@@ -78,6 +78,14 @@ php index.php
 
 4. The script will generate a PNG image with the attendee's name, convert it to a PDF, and send it via email to the attendee's email address.
 
+## Note:
+
+For larger data sets, the script may take longer to execute. If you encounter any issues with the script timing out, you may need to increase the `max_execution_time` value in your PHP configuration file[`php.ini`]. You can also consider breaking the data into smaller chunks and running the script multiple times to avoid timeouts.
+
+```php
+max_execution_time=500
+```
+
 ## License
 
 This project is licensed under the [MIT License](https://github.com/ServiceToMankind/digital-certificate-generator-and-mail/blob/main/LICENSE).
