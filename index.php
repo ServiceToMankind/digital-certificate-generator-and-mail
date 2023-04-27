@@ -6,6 +6,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require('fpdf.php');
+require('mailer.php');
 
 // Read data from CSV file
 $csvFile = fopen('data/workshop-data-main.csv', 'r');
@@ -23,6 +24,7 @@ $data = array_combine($header, $row);
 // Get S-no and Name from CSV data
 $sno = $data['S-no'];
 $uname = $data['Name'];
+$email= $data['Email'];
 $file_name="stmc".$sno;
 
 $font = 'fonts/Allura-Regular.ttf';
@@ -86,6 +88,9 @@ $pdfpath="pdf/" . $file_name . ".pdf";
 
 // Output the PDF document to the browser
 $pdf->Output('F', $pdfpath);
+
+// Send mail
+mailer($email,$name,$pdfpath);
 }
 
 ?>
