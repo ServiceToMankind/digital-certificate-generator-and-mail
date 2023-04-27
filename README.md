@@ -7,6 +7,7 @@ Certificate generator for E-fest, MLRCIE.
 - Don't forget to enable PHP GD in your environment.
 - If your PC cannot execute this script in 120 sec
 - edit the following in your php.ini
+
 ```
 max_execution_time=500
 ```
